@@ -1,5 +1,5 @@
 /*!
- * SimpleEasing v0.0.1
+ * SimpleEasing v0.0.11
  * easing animation helper
  * MIT license
  */
@@ -46,7 +46,9 @@ var SimpleEasing = (function() {
   function stop() {
     this.bPlay = false;
 
-    if (typeof this.onComplete == 'function') {}
+    if (typeof this.onComplete == 'function') {
+      this.onComplete();
+    }
   };
 
   /**
@@ -297,7 +299,6 @@ var SimpleEasing = (function() {
   SimpleEasing.prototype.remove = remove;
 
   SimpleEasing.prototype.getValue = getValue;
-
 
   SimpleEasing.prototype.linearEase = linearEase;
   SimpleEasing.prototype.easeInQuad = easeInQuad;
