@@ -1,4 +1,4 @@
-# ease.js
+# Ease.js
 
 
 ## Usage

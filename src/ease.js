@@ -5,7 +5,7 @@
  */
 'use strict'
 
-import ease from 'easing.js'
+import Easing from 'easing.js'
 
 export default class Ease {
 
