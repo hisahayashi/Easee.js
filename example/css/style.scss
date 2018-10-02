@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1, h2, h3{
+  font-weight: normal;
+}
+
+#app{
+
+  header{
+    padding: 30px;
+    border-bottom: #eee solid 1px;
+    h1{
+
+    }
+  }
+
+  section{
+    width: 600px;
+    margin: 0 auto;
+    padding: 50px 0;
+
+    h1{
+      margin: 0 0 80px 0;
+    }
+
+    h3{
+    }
+
+    .container{
+      position: relative;
+      width: calc(100% + 40px);
+      height: 40px;
+      margin: 0 0 60px 0;
+      background: #f6f6f6;
+      border-radius: 20px;
+
+      .item{
+        position: absolute;
+        left: 0;
+        top: 0px;
+        width: 40px;
+        height: 40px;
+        background: #666;
+        border-radius: 50%;
+      }
+    }
+  }
+}

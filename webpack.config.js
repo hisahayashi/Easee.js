@@ -58,13 +58,15 @@ module.exports = {
 	},
 
 	entry: {
-		app: path.resolve(__dirname, 'src/main.js')
+		app: path.resolve(__dirname, 'src/ease.js')
 	},
 
 	output: {
     // filename: '[name].[chunkhash].js',
     filename: 'ease.js',
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, 'dist'),
+    library: 'Ease',
+    libraryTarget: 'umd'
 	},
 
 	mode: 'development',
