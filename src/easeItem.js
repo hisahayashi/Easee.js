@@ -11,6 +11,7 @@ class EaseItem {
     this.from = _from
     this.to = _to
     this.easing = _easing
+    this.value = this.from
 
     this.timer = new Timer()
     this.startTime = 0

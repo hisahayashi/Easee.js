@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <title>Ease.js Example</title>
-
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="keywords" content="">
@@ -10,53 +10,99 @@
 <meta name="viewport" content="width=device-width" />
 <meta name="format-detection" content="telephone=no">
 <link rel="start" href="/" title="Home">
-
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css" media="all">
-
 </head>
+
 <body>
-
 <main id="app">
+    <header><h1>Ease.js</h1>
+    </header>
+    <section>
+        <h1>Example</h1>
 
-<header><h1>Ease.js</h1></header>
+        <h3><b>Linear</b><span id="value01"></span></h3>
+        <div class="container">
+            <p class="item" id="item01"></p>
+        </div>
 
-<section>
-<h1>Example</h1>
+        <h3><b>InOutQuad</b><span id="value02"></span></h3>
+        <div class="container">
+            <p class="item" id="item02"></p>
+        </div>
 
-<h3>Linear</h3>
-<div class="container"><p id="item01" class="item"></p></div>
+        <h3><b>InOutSine</b><span id="value03"></span></h3>
+        <div class="container">
+            <p class="item" id="item03"></p>
+        </div>
 
-<h3>easeOutBounce</h3>
-<div class="container"><p id="item02" class="item"></p></div>
+        <h3><b>InOutExpo</b><span id="value04"></span></h3>
+        <div class="container">
+            <p class="item" id="item04"></p>
+        </div>
 
-<h3>easeInExpo</h3>
-<div class="container"><p id="item03" class="item"></p></div>
-
-<h3>easeInOutExpo</h3>
-<div class="container"><p id="item04" class="item"></p></div>
-</section>
-
+    </section>
 </main>
 
 <script type="text/javascript" src="../dist/ease.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
 <script type="text/javascript">
+var stats = new Stats();
+$(stats.domElement).css({ position: 'fixed', right: 0, top: 0 });
+$('body').append(stats.domElement);
+
 var ease = new Ease();
 
-var p1 = ease.add(3000, 0, 100, 'Linear');
-var p2 = ease.add(3000, 0, 100, 'OutBounce');
-var p3 = ease.add(3000, 0, 100, 'InExpo');
-var p4 = ease.add(3000, 0, 100, 'InOutExpo');
+var p1 = ease.add(1500, 0, 560, 'Linear');
+var p2 = ease.add(1500, 0, 560, 'InOutQuad');
+var p3 = ease.add(1500, 0, 560, 'InOutSine');
+var p4 = ease.add(1500, 0, 560, 'InOutExpo');
 
-setTimeout(function(){ p1.run() }, 1000);
-p2.run();
-p3.run();
-p4.run();
+var easings = [
+  'Linear',
+  'InQuad',
+  'OutQuad',
+  'InOutQuad',
+  'InCubic',
+  'OutCubic',
+  'InOutCubic',
+  'InQuart',
+  'OutQuart',
+  'InOutQuart',
+  'InQuint',
+  'OutQuint',
+  'InOutQuint',
+  'InSine',
+  'OutSine',
+  'InOutSine',
+  'InExpo',
+  'OutExpo',
+  'InOutExpo',
+  'InCirc',
+  'OutCirc',
+  'InOutCirc',
+  'InElastic',
+  'OutElastic',
+  'InOutElastic',
+  'InBack',
+  'OutBack',
+  'InOutBack',
+  'InBounce',
+  'OutBounce',
+  'InOutBounce'
+]
 
-ease.remove(p1);
-p1 = null;
-delete p1;
+setTimeout(function(){
+  p1.run();
+  p2.run();
+  p3.run();
+  p4.run();
+}, 3000);
+
+// ease.remove(p1);
+// p1 = null;
+// delete p1;
 
 console.log(p1);
 console.log(p1.get());
@@ -64,20 +110,36 @@ console.log(p1);
 
 loop();
 
-function loop(){
+$('#item01').on('click', function(){
+  p1.reset();
+})
+$('#item02').on('click', function(){
+  p2.reset();
+})
+$('#item03').on('click', function(){
+  p3.reset();
+})
+$('#item04').on('click', function(){
+  p4.reset();
+})
 
+function loop() {
+  stats.update();
   ease.update();
 
+  $('#item01').css({ 'transform': 'translateX(' + p1.get() + 'px)' });
+  $('#item02').css({ 'transform': 'translateX(' + p2.get() + 'px)' });
+  $('#item03').css({ 'transform': 'translateX(' + p3.get() + 'px)' });
+  $('#item04').css({ 'transform': 'translateX(' + p4.get() + 'px)' });
 
-  $('#item01').css({left: p1.get() + '%'});
-  $('#item02').css({left: p2.get() + '%'});
-  $('#item03').css({left: p3.get() + '%'});
-  $('#item04').css({left: p4.get() + '%'});
+  $('#value01').text(Math.ceil(p1.get()));
+  $('#value02').text(Math.ceil(p2.get()));
+  $('#value03').text(Math.ceil(p3.get()));
+  $('#value04').text(Math.ceil(p4.get()));
 
   requestAnimationFrame(loop);
 }
-
 </script>
-
 </body>
+
 </html>

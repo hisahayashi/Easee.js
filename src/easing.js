@@ -1,7 +1,7 @@
 'use strict'
 
 const EASING = {
-  Linear(t, b, c, d) {
+  Linear: (t, b, c, d) => {
     return c * t / d + b;
   },
   InQuad: (t, b, c, d) => {
