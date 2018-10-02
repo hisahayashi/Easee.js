@@ -11,6 +11,10 @@ const EaseItem = require('./easeItem.js')
 
 class Ease {
 
+  /**
+   * [constructor description]
+   * @return {[type]} [description]
+   */
   constructor(){
     // variables
     this.easeList = {}
@@ -18,6 +22,13 @@ class Ease {
     this.timer = new Timer()
   }
 
+  /**
+   * [add description]
+   * @param {[type]} _duration [description]
+   * @param {[type]} _from     [description]
+   * @param {[type]} _to       [description]
+   * @param {[type]} _easing   [description]
+   */
   add(_duration, _from, _to, _easing){
     let id = this.getListId()
     let duration = Number(_duration)
@@ -33,12 +44,21 @@ class Ease {
     return item
   }
 
+  /**
+   * [remove description]
+   * @param  {[type]} item [description]
+   * @return {[type]}      [description]
+   */
   remove(item){
-    this.easeList[item.id].remove()
-    delete this.easeList[item.id]
-    item = null
+    let id = item.id
+    this.easeList[id].remove()
+    delete this.easeList[id]
   }
 
+  /**
+   * [update description]
+   * @return {[type]} [description]
+   */
   update(){
     let time = this.timer.time
     for (const key of Object.keys(this.easeList)) {
@@ -46,6 +66,10 @@ class Ease {
     }
   }
 
+  /**
+   * [getListId description]
+   * @return {[type]} [description]
+   */
   getListId(){
     return this.easeListCount
   }

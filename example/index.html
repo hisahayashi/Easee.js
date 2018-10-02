@@ -16,32 +16,32 @@
 
 <body>
 <main id="app">
-    <header><h1>Ease.js</h1>
-    </header>
-    <section>
-        <h1>Example</h1>
+  <header><h1>Ease.js</h1>
+  </header>
+  <section>
+    <h1>Example</h1>
 
-        <h3><b>Linear</b><span id="value01"></span></h3>
-        <div class="container">
-            <p class="item" id="item01"></p>
-        </div>
+    <h3><b>Linear</b><span id="value01"></span></h3>
+    <div class="container">
+      <p class="item" id="item01"></p>
+    </div>
 
-        <h3><b>InOutQuad</b><span id="value02"></span></h3>
-        <div class="container">
-            <p class="item" id="item02"></p>
-        </div>
+    <h3><b>InOutQuad</b><span id="value02"></span></h3>
+    <div class="container">
+      <p class="item" id="item02"></p>
+    </div>
 
-        <h3><b>InOutSine</b><span id="value03"></span></h3>
-        <div class="container">
-            <p class="item" id="item03"></p>
-        </div>
+    <h3><b>InOutSine</b><span id="value03"></span></h3>
+    <div class="container">
+      <p class="item" id="item03"></p>
+    </div>
 
-        <h3><b>InOutExpo</b><span id="value04"></span></h3>
-        <div class="container">
-            <p class="item" id="item04"></p>
-        </div>
+    <h3><b>InOutExpo</b><span id="value04"></span></h3>
+    <div class="container">
+      <p class="item" id="item04"></p>
+    </div>
 
-    </section>
+  </section>
 </main>
 
 <script type="text/javascript" src="../dist/ease.js"></script>
@@ -58,6 +58,10 @@ var p1 = ease.add(1500, 0, 560, 'Linear');
 var p2 = ease.add(1500, 0, 560, 'InOutQuad');
 var p3 = ease.add(1500, 0, 560, 'InOutSine');
 var p4 = ease.add(1500, 0, 560, 'InOutExpo');
+
+// delete sample
+// ease.remove(p1);
+// p1 = null;
 
 var easings = [
   'Linear',
@@ -100,28 +104,24 @@ setTimeout(function(){
   p4.run();
 }, 3000);
 
-// ease.remove(p1);
-// p1 = null;
-// delete p1;
-
-console.log(p1);
-console.log(p1.get());
-console.log(p1);
-
 loop();
 
 $('#item01').on('click', function(){
   p1.reset();
-})
+});
+
 $('#item02').on('click', function(){
   p2.reset();
-})
+});
+
 $('#item03').on('click', function(){
   p3.reset();
-})
+});
+
 $('#item04').on('click', function(){
   p4.reset();
-})
+});
+
 
 function loop() {
   stats.update();
