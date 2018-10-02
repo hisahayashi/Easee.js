@@ -6,7 +6,7 @@
 
 1. Include `ease.js`.
 
-```javascript
+```html
 <script type="text/javascript" src="../dist/ease.js"></script>
 ```
 
