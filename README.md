@@ -4,7 +4,7 @@
 ## Usage
 
 
-1. Import `Easee.js`.
+### 1. Import `Easee.js`.
 
 ```html
 <script type="text/javascript" src="../dist/easee.js"></script>
@@ -26,7 +26,7 @@ var easee = new Easee();
 </script>
 ```
 
-2. Basic code.
+### 2. Basic code.
 
 ```javascript
 // create Easee
