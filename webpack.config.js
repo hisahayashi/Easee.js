@@ -28,37 +28,25 @@ module.exports = {
 	module: {
 		rules: [
 			{
+        test: /\.js$/,
 				include: [path.resolve(__dirname, 'src')],
 				loader: 'babel-loader',
-
 				options: {
 					plugins: ['syntax-dynamic-import'],
-
 					presets: ['@babel/preset-env']
 				},
-
-				test: /\.js$/
 			},
 			{
 				test: /\.(scss|css)$/,
-
 				use: [
-					{
-						loader: 'style-loader'
-					},
-					{
-						loader: 'css-loader'
-					},
-					{
-						loader: 'sass-loader'
-					}
+					{loader: 'style-loader'}, {loader: 'css-loader'}, {loader: 'sass-loader'}
 				]
 			}
 		]
 	},
 
 	entry: {
-		app: path.resolve(__dirname, 'src/ease.js')
+		app: ['babel-polyfill', './src/entry.js'],
 	},
 
 	output: {

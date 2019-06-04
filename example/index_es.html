@@ -46,19 +46,16 @@
   </section>
 </main>
 
-<script type="text/javascript" src="../dist/ease.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
-<script type="text/javascript">
+<script type="module">
+import Ease from '../src/ease.js';
 var stats = new Stats();
 $(stats.domElement).css({ position: 'fixed', right: 0, top: 0 });
 $('body').append(stats.domElement);
 
-console.log('Ease', Ease);
-console.log('window.Ease', window.Ease);
-console.log('window.ease', window.ease);
-// var ease = new Ease();
-var ease = window.ease;
+console.log(Ease);
+var ease = new Ease();
 
 var p1 = ease.add(1500, 0, 560, 'Linear');
 var p2 = ease.add(1500, 0, 560, 'InOutQuad');

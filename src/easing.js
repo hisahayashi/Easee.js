@@ -161,7 +161,7 @@ const EASING = {
   }
 }
 
-module.exports = EASING
+export default EASING
 
 /*
  *

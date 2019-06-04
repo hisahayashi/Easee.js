@@ -16,10 +16,15 @@ h1, h2, h3{
 #app{
 
   header{
+    position: relative;
     padding: 30px;
     border-bottom: #eee solid 1px;
     h1{
-
+    }
+    .btn{
+      position: absolute;
+      right: 0;
+      top: 0;
     }
   }
 

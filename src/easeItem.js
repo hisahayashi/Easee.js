@@ -1,7 +1,7 @@
 'use strict'
 
-const EASING = require('./easing.js')
-const Timer = require('./timer.js')
+import EASING from './easing.js'
+import Timer from './timer.js'
 
 class EaseItem {
 
@@ -108,4 +108,4 @@ class EaseItem {
 
 }
 
-module.exports = EaseItem
+export default EaseItem

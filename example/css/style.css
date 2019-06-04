@@ -9,8 +9,13 @@ h1, h2, h3 {
   font-weight: normal; }
 
 #app header {
+  position: relative;
   padding: 30px;
   border-bottom: #eee solid 1px; }
+  #app header .btn {
+    position: absolute;
+    right: 0;
+    top: 0; }
 #app section {
   width: 600px;
   margin: 0 auto;
