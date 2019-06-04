@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<title>Ease.js Example</title>
+<title>Easee.js Example</title>
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="keywords" content="">
@@ -17,7 +17,7 @@
 <body>
 <main id="app">
   <header>
-    <h1>Ease.js</h1>
+    <h1>Easee.js</h1>
   </header>
   <section>
     <h1>Example</h1>
@@ -46,23 +46,23 @@
   </section>
 </main>
 
-<script type="text/javascript" src="../dist/ease.js"></script>
+<script type="text/javascript" src="../dist/easee.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
 <script type="text/javascript">
-var ease = window.ease;
+var easee = window.easee;
 
 var stats = new Stats();
 $(stats.domElement).css({ position: 'fixed', right: 0, top: 0 });
 $('body').append(stats.domElement);
 
-var p1 = ease.add(1500, 0, 560, 'Linear');
-var p2 = ease.add(1500, 0, 560, 'InOutQuad');
-var p3 = ease.add(1500, 0, 560, 'InOutSine');
-var p4 = ease.add(1500, 0, 560, 'InOutExpo');
+var p1 = easee.add(1500, 0, 560, 'Linear');
+var p2 = easee.add(1500, 0, 560, 'InOutQuad');
+var p3 = easee.add(1500, 0, 560, 'InOutSine');
+var p4 = easee.add(1500, 0, 560, 'InOutExpo');
 
 // delete sample
-// ease.remove(p1);
+// easee.remove(p1);
 // p1 = null;
 
 var easings = [
@@ -127,7 +127,7 @@ $('#item04').on('click', function(){
 
 function loop() {
   stats.update();
-  ease.update();
+  easee.update();
 
   $('#item01').css({ 'transform': 'translateX(' + p1.get() + 'px)' });
   $('#item02').css({ 'transform': 'translateX(' + p2.get() + 'px)' });

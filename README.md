@@ -1,29 +1,39 @@
-# Ease.js
+# Easee.js
 
 
 ## Usage
 
 
-1. Include `ease.js`.
+1. Import `Easee.js`.
 
 ```html
-<script type="text/javascript" src="../dist/ease.js"></script>
+<script type="text/javascript" src="../dist/easee.js"></script>
+<script type="text/javascript">
+var easee = window.easee;
+</script>
 ```
 
 or
 
 ```
-$ npm install easejs
+$ npm install easeejs
+```
+
+```html
+<script type="module">
+import Easee from '../src/easee.js';
+var easee = new Easee();
+</script>
 ```
 
 2. Basic code.
 
 ```javascript
-// create Ease
-var ease = new Ease();
+// create Easee
+var easee = new Easee();
 
 // add tween item
-var item = ease.add(1500, 0, 100, 'InOutSine');
+var item = easee.add(1500, 0, 100, 'InOutSine');
 
 // start tween item
 item.run();
@@ -31,8 +41,8 @@ item.run();
 // animation loop
 loop(){
 
-  // update Ease
-  ease.update();
+  // update Easee
+  easee.update();
 
   // get changed value
   console.log(item.get());

@@ -53,7 +53,7 @@ module.exports = {
     // filename: '[name].[chunkhash].js',
     filename: 'ease.js',
 		path: path.resolve(__dirname, 'dist'),
-    library: 'Ease',
+    library: 'Easee',
     libraryTarget: 'umd'
 	},
 

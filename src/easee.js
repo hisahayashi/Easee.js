@@ -1,5 +1,5 @@
 /*!
- * Ease.js v0.1.0
+ * Easee.js v0.1.0
  * easing animation helper
  * MIT license
  */
@@ -9,7 +9,7 @@ import EASING from './easing.js'
 import Timer from './timer.js'
 import EaseItem from './easeItem.js'
 
-class Ease {
+class Easee {
 
   /**
    * [constructor description]
@@ -76,4 +76,4 @@ class Ease {
 
 }
 
-export default Ease
+export default Easee

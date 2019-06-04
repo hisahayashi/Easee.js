@@ -1,16 +1,16 @@
 /*!
- * Ease.js v0.1.0
+ * Easee.js v0.1.0
  * easing animation helper
  * MIT license
  */
 'use strict'
 
-import Ease from './ease.js'
+import Easee from './easee.js'
 
-window.Ease = Ease
+window.Easee = Easee
 
-let ease = new Ease()
-window.ease = ease
+let easee = new Easee()
+window.easee = easee
 
-var p1 = ease.add(1500, 0, 560, 'Linear')
+// var p1 = easee.add(1500, 0, 560, 'Linear')
 // console.log(p1)
