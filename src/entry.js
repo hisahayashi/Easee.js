@@ -13,4 +13,4 @@ let ease = new Ease()
 window.ease = ease
 
 var p1 = ease.add(1500, 0, 560, 'Linear')
-console.log(p1)
+// console.log(p1)

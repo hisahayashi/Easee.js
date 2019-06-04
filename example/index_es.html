@@ -50,12 +50,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
 <script type="module">
 import Ease from '../src/ease.js';
+var ease = new Ease();
+
 var stats = new Stats();
 $(stats.domElement).css({ position: 'fixed', right: 0, top: 0 });
 $('body').append(stats.domElement);
-
-console.log(Ease);
-var ease = new Ease();
 
 var p1 = ease.add(1500, 0, 560, 'Linear');
 var p2 = ease.add(1500, 0, 560, 'InOutQuad');
