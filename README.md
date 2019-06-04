@@ -63,3 +63,37 @@ loop();
 <a href="http://hisayoshihayashi.com/0/easee/example/" target="_blank">Example is here</a>
 
 
+### 3. Easing List
+
+- Linear
+- InQuad
+- OutQuad
+- InOutQuad
+- InCubic
+- OutCubic
+- InOutCubic
+- InQuart
+- OutQuart
+- InOutQuart
+- InQuint
+- OutQuint
+- InOutQuint
+- InSine
+- OutSine
+- InOutSine
+- InExpo
+- OutExpo
+- InOutExpo
+- InCirc
+- OutCirc
+- InOutCirc
+- InElastic
+- OutElastic
+- InOutElastic
+- InBack
+- OutBack
+- InOutBack
+- InBounce
+- OutBounce
+- InOutBounce
+
