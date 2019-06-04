@@ -7,7 +7,10 @@
     "example": "example"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava -v"
+  },
+  "ava": {
+    "require": ["esm"]
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,7 @@
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.1.0",
     "@webpack-cli/init": "^0.1.2",
+    "ava": "^2.0.0",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-add-module-exports": "^1.0.2",

@@ -10,6 +10,11 @@
 <script type="text/javascript" src="../dist/ease.js"></script>
 ```
 
+or
+
+```
+$ npm install easejs
+```
 
 2. Basic code.
 
@@ -28,10 +33,10 @@ loop(){
 
   // update Ease
   ease.update();
-  
+
   // get changed value
   console.log(item.get());
-  
+
   requestAnimationFrame(loop);
 };
 
