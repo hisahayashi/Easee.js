@@ -1,5 +1,6 @@
 # Easee.js
 
+[![npm version](https://badge.fury.io/js/easee.js.svg)](https://badge.fury.io/js/easee.js)
 
 ## Usage
 
@@ -9,7 +10,7 @@
 #### ES6
 
 ```
-$ npm install easeejs
+$ npm i easee.js
 ```
 
 ```html
