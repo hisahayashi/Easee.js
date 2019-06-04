@@ -6,14 +6,7 @@
 
 ### 1. Import `Easee.js`.
 
-```html
-<script type="text/javascript" src="../dist/easee.js"></script>
-<script type="text/javascript">
-var easee = window.easee;
-</script>
-```
-
-or
+#### ES6
 
 ```
 $ npm install easeejs
@@ -25,6 +18,18 @@ import Easee from '../src/easee.js';
 var easee = new Easee();
 </script>
 ```
+
+or
+
+#### Script Load
+
+```html
+<script type="text/javascript" src="../dist/easee.js"></script>
+<script type="text/javascript">
+var easee = window.easee;
+</script>
+```
+
 
 ### 2. Basic code.
 
