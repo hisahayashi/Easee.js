@@ -35,8 +35,6 @@ var easee = window.easee;
 ### 2. Basic code.
 
 ```javascript
-// create Easee
-var easee = new Easee();
 
 // add tween item
 var item = easee.add(1500, 0, 100, 'InOutSine');
