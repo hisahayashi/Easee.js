@@ -2,7 +2,7 @@
   "name": "easee.js",
   "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "src/entry.js",
   "directories": {
     "example": "example"
   },
