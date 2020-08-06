@@ -37,7 +37,8 @@ var easee = window.easee;
 ```javascript
 
 // add tween item
-var item = easee.add(1500, 0, 100, 'InOutSine');
+var item = easee.add(1500, 0, 100
+  'InOutSine');
 
 // start tween item
 item.run();
@@ -63,35 +64,35 @@ loop();
 
 ### 3. Easing List
 
-- Linear
-- InQuad
-- OutQuad
-- InOutQuad
-- InCubic
-- OutCubic
-- InOutCubic
-- InQuart
-- OutQuart
-- InOutQuart
-- InQuint
-- OutQuint
-- InOutQuint
-- InSine
-- OutSine
-- InOutSine
-- InExpo
-- OutExpo
-- InOutExpo
-- InCirc
-- OutCirc
-- InOutCirc
-- InElastic
-- OutElastic
-- InOutElastic
-- InBack
-- OutBack
-- InOutBack
-- InBounce
-- OutBounce
-- InOutBounce
+- 'linear':
+- 'in.quad':
+- 'out.quad':
+- 'inout.quad':
+- 'in.cubic':
+- 'out.cubic':
+- 'inout.cubic':
+- 'in.quart':
+- 'out.quart':
+- 'inout.quart':
+- 'in.quint':
+- 'out.quint':
+- 'inout.quint':
+- 'in.sine':
+- 'out.sine':
+- 'inout.sine':
+- 'in.expo':
+- 'out.expo':
+- 'inout.expo':
+- 'in.circ':
+- 'out.circ':
+- 'inout.circ':
+- 'in.elastic':
+- 'out.elastic':
+- 'inout.elastic':
+- 'in.back':
+- 'out.back':
+- 'inout.back':
+- 'in.bounce':
+- 'out.bounce':
+- 'inout.bounce':
 
