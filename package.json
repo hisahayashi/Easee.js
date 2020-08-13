@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hisahayashi/SimpleEasing.js.git"
+    "url": "git+https://github.com/hisahayashi/easee.js.git"
   },
   "author": "hisahayashi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hisahayashi/SimpleEasing.js/issues"
+    "url": "https://github.com/hisahayashi/easee.js/issues"
   },
-  "homepage": "https://github.com/hisahayashi/SimpleEasing.js#readme",
+  "homepage": "https://github.com/hisahayashi/easee.js#readme",
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/polyfill": "^7.4.4",
