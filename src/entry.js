@@ -7,10 +7,4 @@
 
 import Easee from './easee.js'
 
-window.Easee = Easee
-
-let easee = new Easee()
-window.easee = easee
-
-// var p1 = easee.add(1500, 0, 560, 'Linear')
-// console.log(p1)
+export default Easee

@@ -2,7 +2,7 @@ import test from 'ava'
 import Easee from '../src/easee.js'
 
 let easings = [
-  'Linear', 'InQuad', 'OutQuad', 'InOutQuad', 'InCubic', 'OutCubic', 'InOutCubic', 'InQuart', 'OutQuart', 'InOutQuart', 'InQuint', 'OutQuint', 'InOutQuint', 'InSine', 'OutSine', 'InOutSine', 'InExpo', 'OutExpo', 'InOutExpo', 'InCirc', 'OutCirc', 'InOutCirc', 'InElastic', 'OutElastic', 'InOutElastic', 'InBack', 'OutBack', 'InOutBack', 'InBounce', 'OutBounce', 'InOutBounce'
+  'linear', 'in.quad', 'out.quad', 'inout.quad', 'in.cubic', 'out.cubic', 'inout.cubic', 'in.quart', 'out.quart', 'inout.quart', 'in.quint', 'out.quint', 'inout.quint', 'in.sine', 'out.sine', 'inout.sine', 'in.expo', 'out.expo', 'inout.expo', 'in.circ', 'out.circ', 'inout.circ', 'in.elastic', 'out.elastic', 'inout.elastic', 'in.back', 'out.back', 'inout.back', 'in.bounce', 'out.bounce', 'inout.bounce'
 ]
 
 /**
@@ -22,7 +22,7 @@ test('Easee: New', t => {
  */
 test('Easee: Add', t => {
   let ease = new Easee()
-  let p1 = ease.add(1500, 0, 560, 'Linear')
+  let p1 = ease.add(1500, 0, 560, 'linear')
   t.pass()
 })
 
@@ -34,7 +34,7 @@ test('Easee: Add', t => {
 test('Easee: Run', t => {
   let self = this
   let ease = new Easee()
-  let p1 = ease.add(1500, 0, 560, 'Linear')
+  let p1 = ease.add(1500, 0, 560, 'linear')
   p1.run()
 
   function loop(){
