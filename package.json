@@ -8,10 +8,13 @@
   },
   "scripts": {
     "test": "ava -v",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "webpack-dev-server"
   },
   "ava": {
-    "require": ["esm"]
+    "require": [
+      "esm"
+    ]
   },
   "repository": {
     "type": "git",
@@ -27,7 +30,7 @@
     "@babel/core": "^7.1.2",
     "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.1.0",
-    "@webpack-cli/init": "^0.1.2",
+    "@webpack-cli/init": "^0.3.0",
     "ava": "^2.0.0",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.4",

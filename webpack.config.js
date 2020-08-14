@@ -59,6 +59,18 @@ module.exports = {
 
 	mode: 'development',
 
+  devServer: {
+    open: true,
+    openPage: 'example/',
+    contentBase: path.join(__dirname, './'),
+    watchContentBase: true,
+    historyApiFallback: true,
+    host: 'localhost',
+    disableHostCheck: true,
+    port: 8000,
+    noInfo: true
+  },
+
 	optimization: {
 		splitChunks: {
 			cacheGroups: {
