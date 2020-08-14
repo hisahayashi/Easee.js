@@ -84,8 +84,9 @@ class EaseItem {
    * @return {[type]} [description]
    */
   reset(){
-    this.isActive = true
-    this.startTime = this.timer.time
+    this.startTime = 0
+    this.currentTime = 0
+    this.steppingTime = 0
     return this
   }
 
