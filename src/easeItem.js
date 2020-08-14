@@ -27,7 +27,7 @@ class EaseItem {
     this.currentTime = 0
     this.steppingTime = 0
     this.isActive = false
-    this.complete = ()=>{}
+    this.complete = null
   }
 
   /**
@@ -102,8 +102,8 @@ class EaseItem {
         this.currentTime = this.duration
         this.isActive = false
 
-        if(typeof this.onComplete == 'function'){
-
+        if(typeof this.complete == 'function'){
+          this.complete.call(this)
         }
       }
 
@@ -111,10 +111,8 @@ class EaseItem {
     }
   }
 
-  onComplete(_callback, _args){
-    if(typeof _callback == 'function'){
-      _callback.call(this, _args)
-    }
+  onComplete(_callback){
+    this.complete = _callback
   }
 
 }

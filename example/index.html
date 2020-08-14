@@ -4,7 +4,7 @@
 <head>
 <title>Easee.js Example</title>
 <meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html charset=utf-8">
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width" />
@@ -46,100 +46,100 @@
   </section>
 </main>
 
-<script type="text/javascript" src="../dist/easee.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
-<script type="text/javascript">
-var easee = window.easee;
+<script type="module">
+import Easee from '../src/easee.js'
+var easee = new Easee()
 
-var stats = new Stats();
-$(stats.domElement).css({ position: 'fixed', right: 0, top: 0 });
-$('body').append(stats.domElement);
+var stats = new Stats()
+$(stats.domElement).css({ position: 'fixed', right: 0, top: 0 })
+$('body').append(stats.domElement)
 
-var p1 = easee.add(1500, 0, 560, 'Linear');
-var p2 = easee.add(1500, 0, 560, 'InOutQuad');
-var p3 = easee.add(1500, 0, 560, 'InOutSine');
-var p4 = easee.add(1500, 0, 560, 'InOutExpo');
+var p1 = easee.add(1500, 0, 560, 'linear')
+var p2 = easee.add(1500, 0, 560, 'inout.quad')
+var p3 = easee.add(1500, 0, 560, 'inout.sine')
+var p4 = easee.add(1500, 0, 560, 'inout.expo')
 
 // delete sample
-// easee.remove(p1);
-// p1 = null;
+// easee.remove(p1)
+// p1 = null
 
 var easings = [
-  'Linear',
-  'InQuad',
-  'OutQuad',
-  'InOutQuad',
-  'InCubic',
-  'OutCubic',
-  'InOutCubic',
-  'InQuart',
-  'OutQuart',
-  'InOutQuart',
-  'InQuint',
-  'OutQuint',
-  'InOutQuint',
-  'InSine',
-  'OutSine',
-  'InOutSine',
-  'InExpo',
-  'OutExpo',
-  'InOutExpo',
-  'InCirc',
-  'OutCirc',
-  'InOutCirc',
-  'InElastic',
-  'OutElastic',
-  'InOutElastic',
-  'InBack',
-  'OutBack',
-  'InOutBack',
-  'InBounce',
-  'OutBounce',
-  'InOutBounce'
+  'linear',
+  'in.quad',
+  'out.quad',
+  'inout.quad',
+  'in.cubic',
+  'out.cubic',
+  'inout.cubic',
+  'in.quart',
+  'out.quart',
+  'inout.quart',
+  'in.quint',
+  'out.quint',
+  'inout.quint',
+  'in.sine',
+  'out.sine',
+  'inout.sine',
+  'in.expo',
+  'out.expo',
+  'inout.expo',
+  'in.circ',
+  'out.circ',
+  'inout.circ',
+  'in.elastic',
+  'out.elastic',
+  'inout.elastic',
+  'in.back',
+  'out.back',
+  'inout.back',
+  'in.bounce',
+  'out.bounce',
+  'inout.bounce',
 ]
 
 setTimeout(function(){
-  p1.run();
-  p2.run();
-  p3.run();
-  p4.run();
-}, 3000);
+  p1.run()
+  p2.run()
+  p3.run()
+  p4.run()
+}, 3000)
 
-loop();
+loop()
 
 $('#item01').on('click', function(){
-  p1.reset();
-});
+  p1.reset()
+})
 
 $('#item02').on('click', function(){
-  p2.reset();
-});
+  p2.reset()
+})
 
 $('#item03').on('click', function(){
-  p3.reset();
-});
+  p3.reset()
+})
 
 $('#item04').on('click', function(){
-  p4.reset();
-});
+  p4.reset()
+})
 
 
 function loop() {
-  stats.update();
-  easee.update();
+  stats.update()
+  easee.update()
 
-  $('#item01').css({ 'transform': 'translateX(' + p1.get() + 'px)' });
-  $('#item02').css({ 'transform': 'translateX(' + p2.get() + 'px)' });
-  $('#item03').css({ 'transform': 'translateX(' + p3.get() + 'px)' });
-  $('#item04').css({ 'transform': 'translateX(' + p4.get() + 'px)' });
+  $('#item01').css({ 'transform': 'translateX(' + p1.get() + 'px)' })
+  $('#item02').css({ 'transform': 'translateX(' + p2.get() + 'px)' })
+  $('#item03').css({ 'transform': 'translateX(' + p3.get() + 'px)' })
+  $('#item04').css({ 'transform': 'translateX(' + p4.get() + 'px)' })
 
-  $('#value01').text(Math.ceil(p1.get()));
-  $('#value02').text(Math.ceil(p2.get()));
-  $('#value03').text(Math.ceil(p3.get()));
-  $('#value04').text(Math.ceil(p4.get()));
+  $('#value01').text(Math.ceil(p1.get()))
+  $('#value02').text(Math.ceil(p2.get()))
+  $('#value03').text(Math.ceil(p3.get()))
+  $('#value04').text(Math.ceil(p4.get()))
 
-  requestAnimationFrame(loop);
+  requestAnimationFrame(loop)
 }
 </script>
 </body>
