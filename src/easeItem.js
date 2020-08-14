@@ -27,6 +27,7 @@ class EaseItem {
     this.currentTime = 0
     this.steppingTime = 0
     this.isActive = false
+    this.complete = ()=>{}
   }
 
   /**
@@ -100,9 +101,19 @@ class EaseItem {
       if(this.currentTime > this.duration){
         this.currentTime = this.duration
         this.isActive = false
+
+        if(typeof this.onComplete == 'function'){
+
+        }
       }
 
       this.value = EASING[this.easing](this.currentTime, this.from, this.to, this.duration)
+    }
+  }
+
+  onComplete(_callback, _args){
+    if(typeof _callback == 'function'){
+      _callback.call(this, _args)
     }
   }
 
